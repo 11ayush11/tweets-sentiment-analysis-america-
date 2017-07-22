@@ -1,0 +1,12 @@
+import re
+import pandas  as pd
+
+df = pd.read_csv('xyz.csv')  #file name 
+df.columns = ['location','tweet','null1','lang','null2','name','age_of_user','time_oftweet','retweet','polarity','objective']
+ 
+for id,text in enumerate(df['tweeet']):
+    text = re.sub('RT\s*@\w+\:\s*', '', text)
+    text = re.sub('http([\w:./]+)','',text)
+    df.iloc[id,1] = text    
+    
+df.to_csv('xyz.csv') 
