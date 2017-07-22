@@ -1,6 +1,6 @@
 import pandas as pd
 df = pd.read_csv('xyz.csv')
-df.columns = ['location','tweet','null1','lang','null2','name','age_of_user','time_oftweet','retweet','polarity','objective']
+df.columns = ['location','tweet','lang','name','age_of_user','time_oftweet','retweet','polarity','objective']
 
 def get_candidate(row):
     candidates = []
