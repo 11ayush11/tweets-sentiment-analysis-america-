@@ -8,5 +8,7 @@ for id,text in enumerate(df['tweeet']):
     text = re.sub('RT\s*@\w+\:\s*', '', text)
     text = re.sub('http([\w:./]+)','',text)
     df.iloc[id,1] = text    
-    
+
+df.drop(df.columns[[2]], axis=1, inplace=True)
+df.drop(df.columns[[3]], axis=1, inplace=True)
 df.to_csv('xyz.csv') 
