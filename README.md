@@ -17,4 +17,4 @@ api_secret = "Enter api secret"
 access_token_key = "Enter your access token key here"
 access_token_secret = "Enter your access token secret here"
 
-Run the following and make sure you see data flowing and that no errors occur $ python twitter_extraction.py > output.csv
+Run the following and make sure you see data flowing and that no errors occur $ python twitter_extraction.py > donald.csv
